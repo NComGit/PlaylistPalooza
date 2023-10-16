@@ -1,0 +1,44 @@
+<Users Table>
+userId(pk)
+email (used as username)
+password
+firstName
+lastName
+phoneNumber
+address
+accountStatus (active/deleted)
+
+<Event Table>
+eventId(pk)
+eventName
+locationId(fk)
+date
+time
+price
+musicalGenre
+maxCapacity
+numOfTicketSold
+
+<Artist Table>
+artistName(comp.pk)
+eventId(comp.pk)(fk)
+mainMusicalTalent
+
+<Location Table>
+locationId(pk)
+locationName
+address
+maxCapacity
+
+<Orders Table>
+orderId(pk)
+userId(fk)
+ticketId(fk)
+ticketQuantity
+ticketPrice
+totalPrice
+
+<Ticket Table>
+ticketId (pk)
+eventId(fk)
+locationId(fk)
